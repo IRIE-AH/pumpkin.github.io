@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .boximage {
   width:100%;
   margin:0;
@@ -11,4 +15,47 @@
 .donation_box {
   border:1px solid #ccaaff;
   width:70%;
+}
+
+.donation_box img {
+  transition: all 0.15s linear;
+}
+
+.donation_box :hover img {
+  transform: rotate(12deg);
+
+}
+
+.donation_box label {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.donation_box input {
+  display: none;
+}
+
+.donation_box .hidden_show {
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: 0.8s;
+}
+
+.donation_box input:checked ~ .hidden_show {
+  height: auto;
+  opacity: 1;
+}
+
+.message {
+  z-index: 100;
+  background-color: #fff;
+  width: 60%;
+  height: 80%;
+  border: 2px solid #aaffcc;
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  left: 20%;
 }
